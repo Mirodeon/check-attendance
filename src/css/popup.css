@@ -46,8 +46,34 @@ body .container-cadre .container-popup {
   height: 250px;
   box-sizing: border-box;
 }
+body .container-cadre .container-popup header {
+  display: flex;
+  margin: 20px auto;
+  margin-left: 20px;
+}
+body .container-cadre .container-popup header img {
+  display: block;
+  width: 60px;
+  height: 60px;
+}
 body .container-cadre .container-popup header h1 {
-  font-size: 40px;
+  font-size: 20px;
+  line-height: 20px;
+  width: 80px;
+  margin-left: 5px;
+}
+body .container-cadre .container-popup main {
+  margin: 0px 20px;
+}
+body .container-cadre .container-popup main article .title_article {
+  font-size: 18px;
+}
+body .container-cadre .container-popup main article .container-switch-btn {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 @-webkit-keyframes spotlight {

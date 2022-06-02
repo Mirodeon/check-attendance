@@ -49,8 +49,39 @@ body {
             box-sizing: border-box;
 
             header {
+                display: flex;
+                margin: 20px auto;
+                margin-left: 20px;
+
+                img {
+                    display: block;
+                    width: 60px;
+                    height: 60px;
+                }
+
                 h1 {
-                    font-size: 40px;
+                    font-size: 20px;
+                    line-height: 20px;
+                    width: 80px;
+                    margin-left: 5px;
+                }
+            }
+
+            main {
+                margin: 0px 20px;
+
+                article {
+                    .title_article {
+                        font-size: 18px;
+                    }
+
+                    .container-switch-btn {
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 16px;
+                        margin-top: 10px;
+                        margin-bottom: 15px;
+                    }
                 }
             }
         }
