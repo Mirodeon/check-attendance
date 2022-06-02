@@ -8,6 +8,9 @@ function pointage() {
     if ((heure == 08 && min == 55) || (heure == 12 && min == 30) || (heure == 13 && min == 20) || (heure == 17 && min == 00)) {
         location.reload();
     } // refresh
+    else if (heure == 08 && min == 56) {
+        document.querySelector(".btn-outline-primary").click();
+    } // @becode
     else if ((heure == 08 && min == 57) || (heure == 12 && min == 32) || (heure == 13 && min == 22) || (heure == 17 && min == 02)) {
         document.querySelector(".btn-success").click();
     } // pointage
