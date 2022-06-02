@@ -1,0 +1,22 @@
+{
+    "name": "Attendance Check BeCode",
+    "author": "Mehdi HABARU",
+    "manifest_version": 2,
+    "version": "1.0",
+    "description": "Pointe aux heures correspondantes",
+    "content_scripts": [
+        {
+            "all_frames": true,
+            "matches": [
+                "https://my.becode.org/*"
+            ],
+            "js": [
+                "pointage.js"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "browser_action": {
+        "default_icon": "favicon-32x32.png"
+    }
+}
