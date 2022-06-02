@@ -5,10 +5,21 @@
 }
 
 body {
-  width: 240px;
+  width: 320px;
   height: 320px;
   display: flex;
   background: black;
+  align-items: center;
+  position: relative;
+  box-shadow: inset -1px 1px 5px 0px grey, inset -1px -1px 5px 0px grey, -1px 1px 5px 0px black, -1px -1px 5px 0px black;
+  font-family: "Road Rage", cursive;
+}
+body .bg-popup {
+  position: absolute;
+  -webkit-animation: 3s ease-in 1s infinite alternate spotlight;
+          animation: 3s ease-in 1s infinite alternate spotlight;
+  z-index: -1;
+  height: 320px;
 }
 body .container-cadre {
   width: 200px;
@@ -17,8 +28,6 @@ body .container-cadre {
   position: relative;
   background: radial-gradient(black, grey);
   margin: 0px auto;
-  margin-top: 40px;
-  margin-bottom: 30px;
   color: white;
 }
 body .container-cadre .cadre {
@@ -26,7 +35,7 @@ body .container-cadre .cadre {
   top: -40px;
   left: 0px;
   width: 220px;
-  height: 290px;
+  height: 295px;
   display: block;
   filter: drop-shadow(-1px 1px 5px black) drop-shadow(-1px -1px 5px black);
   z-index: 2;
@@ -35,4 +44,26 @@ body .container-cadre .container-popup {
   padding: 10px 10px;
   width: 200px;
   height: 250px;
+  box-sizing: border-box;
+}
+body .container-cadre .container-popup header h1 {
+  font-size: 40px;
+}
+
+@-webkit-keyframes spotlight {
+  from {
+    filter: drop-shadow(0px 0px -1px cyan);
+  }
+  to {
+    filter: drop-shadow(0px 0px 1px cyan);
+  }
+}
+
+@keyframes spotlight {
+  from {
+    filter: drop-shadow(0px 0px -1px cyan);
+  }
+  to {
+    filter: drop-shadow(0px 0px 1px cyan);
+  }
 }/*# sourceMappingURL=popup.css.map */

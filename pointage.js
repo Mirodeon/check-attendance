@@ -14,7 +14,7 @@ function pointage() {
     else if ((heure == 08 && min == 57) || (heure == 12 && min == 32) || (heure == 13 && min == 22) || (heure == 17 && min == 02)) {
         document.querySelector(".btn-success").click();
     } // pointage
-    /*else if (heure == 13 && min == 58) {
+    /*else if (heure == 14 && min == 01) {
         alert("Hello World !");
     }*/ //test
 }
