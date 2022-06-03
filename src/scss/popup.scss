@@ -34,7 +34,7 @@ body {
         .cadre {
             position: absolute;
             top: -40px;
-            left: 0px;
+            left: -5px;
             width: 220px;
             height: 295px;
             display: block;
@@ -57,6 +57,7 @@ body {
                     display: block;
                     width: 60px;
                     height: 60px;
+                    filter: drop-shadow(-1px 1px 5px black) drop-shadow(-1px -1px 5px black);
                 }
 
                 h1 {
@@ -81,6 +82,74 @@ body {
                         font-size: 16px;
                         margin-top: 10px;
                         margin-bottom: 15px;
+                        align-items: center;
+
+                        p {
+                            box-sizing: border-box;
+                            width: 35px;
+
+                            &.second-switch {
+                                text-align: right;
+                            }
+                        }
+
+                        .switch-btn-axe {
+                            box-sizing: border-box;
+                            width: 50px;
+                            height: 8px;
+                            border-radius: 4px;
+                            filter: drop-shadow(-1px 1px 5px black) drop-shadow(-1px -1px 5px black);
+                            background: white;
+                            justify-self: center;
+                            position: relative;
+
+                            .switch-btn {
+                                position: absolute;
+                                top: -1px;
+                                transition: all 1s ease-in 0s;
+
+                                &.becode, &.on-state {
+                                    left: 38px;
+                                }
+
+                                &.home, &.off-state {
+                                    transform:translateX(-26px);
+                                }
+
+                                .container-img-btn {
+                                    position: relative;
+
+                                    .img-btn {
+                                        height: 12px;
+                                        width: 12px;
+                                        border-radius: 50%;
+                                        display: block;
+                                        opacity: 0.2;
+                                    }
+
+                                    .bg-btn {
+                                        position: absolute;
+                                        width: 24px;
+                                        display: block;
+                                        z-index: -1;
+                                        top: -6px;
+                                        left: -6px;
+                                        background: black;
+                                        border-radius: 50%;
+                                        filter: drop-shadow(-1px 1px 1px black) drop-shadow(-1px -1px 1px black);
+                                    }
+                                }
+
+                                &:hover {
+                                    .container-img-btn {
+                                        img {
+                                            animation: 0.5s linear 0s infinite alternate nextlight;
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -95,5 +164,15 @@ body {
 
     to {
         filter: drop-shadow(0px 0px 1px cyan);
+    }
+}
+
+@keyframes nextlight {
+    from {
+        filter: drop-shadow(0px 0px 0px cyan);
+    }
+
+    to {
+        filter: drop-shadow(0px 0px 5px cyan);
     }
 }

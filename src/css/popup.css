@@ -33,7 +33,7 @@ body .container-cadre {
 body .container-cadre .cadre {
   position: absolute;
   top: -40px;
-  left: 0px;
+  left: -5px;
   width: 220px;
   height: 295px;
   display: block;
@@ -55,6 +55,7 @@ body .container-cadre .container-popup header img {
   display: block;
   width: 60px;
   height: 60px;
+  filter: drop-shadow(-1px 1px 5px black) drop-shadow(-1px -1px 5px black);
 }
 body .container-cadre .container-popup header h1 {
   font-size: 20px;
@@ -74,6 +75,61 @@ body .container-cadre .container-popup main article .container-switch-btn {
   font-size: 16px;
   margin-top: 10px;
   margin-bottom: 15px;
+  align-items: center;
+}
+body .container-cadre .container-popup main article .container-switch-btn p {
+  box-sizing: border-box;
+  width: 35px;
+}
+body .container-cadre .container-popup main article .container-switch-btn p.second-switch {
+  text-align: right;
+}
+body .container-cadre .container-popup main article .container-switch-btn .switch-btn-axe {
+  box-sizing: border-box;
+  width: 50px;
+  height: 8px;
+  border-radius: 4px;
+  filter: drop-shadow(-1px 1px 5px black) drop-shadow(-1px -1px 5px black);
+  background: white;
+  justify-self: center;
+  position: relative;
+}
+body .container-cadre .container-popup main article .container-switch-btn .switch-btn-axe .switch-btn {
+  position: absolute;
+  top: -1px;
+  transition: all 1s ease-in 0s;
+}
+body .container-cadre .container-popup main article .container-switch-btn .switch-btn-axe .switch-btn.becode, body .container-cadre .container-popup main article .container-switch-btn .switch-btn-axe .switch-btn.on-state {
+  left: 38px;
+}
+body .container-cadre .container-popup main article .container-switch-btn .switch-btn-axe .switch-btn.home, body .container-cadre .container-popup main article .container-switch-btn .switch-btn-axe .switch-btn.off-state {
+  transform: translateX(-26px);
+}
+body .container-cadre .container-popup main article .container-switch-btn .switch-btn-axe .switch-btn .container-img-btn {
+  position: relative;
+}
+body .container-cadre .container-popup main article .container-switch-btn .switch-btn-axe .switch-btn .container-img-btn .img-btn {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  display: block;
+  opacity: 0.2;
+}
+body .container-cadre .container-popup main article .container-switch-btn .switch-btn-axe .switch-btn .container-img-btn .bg-btn {
+  position: absolute;
+  width: 24px;
+  display: block;
+  z-index: -1;
+  top: -6px;
+  left: -6px;
+  background: black;
+  border-radius: 50%;
+  filter: drop-shadow(-1px 1px 1px black) drop-shadow(-1px -1px 1px black);
+}
+body .container-cadre .container-popup main article .container-switch-btn .switch-btn-axe .switch-btn:hover .container-img-btn img {
+  -webkit-animation: 0.5s linear 0s infinite alternate nextlight;
+          animation: 0.5s linear 0s infinite alternate nextlight;
+  opacity: 1;
 }
 
 @-webkit-keyframes spotlight {
@@ -91,5 +147,21 @@ body .container-cadre .container-popup main article .container-switch-btn {
   }
   to {
     filter: drop-shadow(0px 0px 1px cyan);
+  }
+}
+@-webkit-keyframes nextlight {
+  from {
+    filter: drop-shadow(0px 0px 0px cyan);
+  }
+  to {
+    filter: drop-shadow(0px 0px 5px cyan);
+  }
+}
+@keyframes nextlight {
+  from {
+    filter: drop-shadow(0px 0px 0px cyan);
+  }
+  to {
+    filter: drop-shadow(0px 0px 5px cyan);
   }
 }/*# sourceMappingURL=popup.css.map */
