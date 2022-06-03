@@ -1,7 +1,7 @@
 @import "reset.css";
 @import url("https://fonts.googleapis.com/css2?family=Barlow&family=Road+Rage&display=swap");
 * {
-  cursor: url("../../src/cursor/lumos.png"), auto;
+  cursor: url("../../src/cursor/Obsidian Front.cur"), auto;
 }
 
 body {
@@ -18,7 +18,6 @@ body .bg-popup {
   position: absolute;
   -webkit-animation: 3s ease-in 1s infinite alternate spotlight;
           animation: 3s ease-in 1s infinite alternate spotlight;
-  z-index: -1;
   height: 320px;
 }
 body .container-cadre {
@@ -28,7 +27,6 @@ body .container-cadre {
   position: relative;
   background: radial-gradient(black, grey);
   margin: 0px auto;
-  color: white;
 }
 body .container-cadre .cadre {
   position: absolute;
@@ -38,38 +36,43 @@ body .container-cadre .cadre {
   height: 295px;
   display: block;
   filter: drop-shadow(-1px 1px 5px black) drop-shadow(-1px -1px 5px black);
-  z-index: 2;
+  z-index: 1;
 }
-body .container-cadre .container-popup {
+body .container-popup {
+  position: absolute;
+  top: 35px;
+  left: 60px;
   padding: 10px 10px;
   width: 200px;
   height: 250px;
   box-sizing: border-box;
+  color: white;
+  z-index: 2;
 }
-body .container-cadre .container-popup header {
+body .container-popup header {
   display: flex;
   margin: 20px auto;
   margin-left: 20px;
 }
-body .container-cadre .container-popup header img {
+body .container-popup header img {
   display: block;
   width: 60px;
   height: 60px;
   filter: drop-shadow(-1px 1px 5px black) drop-shadow(-1px -1px 5px black);
 }
-body .container-cadre .container-popup header h1 {
+body .container-popup header h1 {
   font-size: 20px;
   line-height: 20px;
   width: 80px;
   margin-left: 5px;
 }
-body .container-cadre .container-popup main {
+body .container-popup main {
   margin: 0px 20px;
 }
-body .container-cadre .container-popup main article .title_article {
+body .container-popup main article .title_article {
   font-size: 18px;
 }
-body .container-cadre .container-popup main article .container-switch-btn {
+body .container-popup main article .container-switch-btn {
   display: flex;
   justify-content: space-between;
   font-size: 16px;
@@ -77,14 +80,14 @@ body .container-cadre .container-popup main article .container-switch-btn {
   margin-bottom: 15px;
   align-items: center;
 }
-body .container-cadre .container-popup main article .container-switch-btn p {
+body .container-popup main article .container-switch-btn p {
   box-sizing: border-box;
   width: 35px;
 }
-body .container-cadre .container-popup main article .container-switch-btn p.second-switch {
+body .container-popup main article .container-switch-btn p.second-switch {
   text-align: right;
 }
-body .container-cadre .container-popup main article .container-switch-btn .switch-btn-axe {
+body .container-popup main article .container-switch-btn .switch-btn-axe {
   box-sizing: border-box;
   width: 50px;
   height: 8px;
@@ -94,28 +97,29 @@ body .container-cadre .container-popup main article .container-switch-btn .switc
   justify-self: center;
   position: relative;
 }
-body .container-cadre .container-popup main article .container-switch-btn .switch-btn-axe .switch-btn {
+body .container-popup main article .container-switch-btn .switch-btn-axe .switch-btn {
   position: absolute;
   top: -1px;
   transition: all 1s ease-in 0s;
 }
-body .container-cadre .container-popup main article .container-switch-btn .switch-btn-axe .switch-btn.becode, body .container-cadre .container-popup main article .container-switch-btn .switch-btn-axe .switch-btn.on-state {
+body .container-popup main article .container-switch-btn .switch-btn-axe .switch-btn.becode, body .container-popup main article .container-switch-btn .switch-btn-axe .switch-btn.on-state {
   left: 38px;
 }
-body .container-cadre .container-popup main article .container-switch-btn .switch-btn-axe .switch-btn.home, body .container-cadre .container-popup main article .container-switch-btn .switch-btn-axe .switch-btn.off-state {
-  transform: translateX(-26px);
+body .container-popup main article .container-switch-btn .switch-btn-axe .switch-btn.home, body .container-popup main article .container-switch-btn .switch-btn-axe .switch-btn.off-state {
+  left: 38px;
+  transform: translateX(-38px);
 }
-body .container-cadre .container-popup main article .container-switch-btn .switch-btn-axe .switch-btn .container-img-btn {
+body .container-popup main article .container-switch-btn .switch-btn-axe .switch-btn .container-img-btn {
   position: relative;
 }
-body .container-cadre .container-popup main article .container-switch-btn .switch-btn-axe .switch-btn .container-img-btn .img-btn {
+body .container-popup main article .container-switch-btn .switch-btn-axe .switch-btn .container-img-btn .img-btn {
   height: 12px;
   width: 12px;
   border-radius: 50%;
   display: block;
   opacity: 0.2;
 }
-body .container-cadre .container-popup main article .container-switch-btn .switch-btn-axe .switch-btn .container-img-btn .bg-btn {
+body .container-popup main article .container-switch-btn .switch-btn-axe .switch-btn .container-img-btn .bg-btn {
   position: absolute;
   width: 24px;
   display: block;
@@ -126,7 +130,7 @@ body .container-cadre .container-popup main article .container-switch-btn .switc
   border-radius: 50%;
   filter: drop-shadow(-1px 1px 1px black) drop-shadow(-1px -1px 1px black);
 }
-body .container-cadre .container-popup main article .container-switch-btn .switch-btn-axe .switch-btn:hover .container-img-btn img {
+body .container-popup main article .container-switch-btn .switch-btn-axe .switch-btn:hover .container-img-btn img {
   -webkit-animation: 0.5s linear 0s infinite alternate nextlight;
           animation: 0.5s linear 0s infinite alternate nextlight;
   opacity: 1;
