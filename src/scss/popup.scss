@@ -103,24 +103,24 @@ body {
                         height: 8px;
                         border-radius: 4px;
                         filter: drop-shadow(-1px 1px 5px black) drop-shadow(-1px -1px 5px black);
-                        background: white;
+                        background: radial-gradient(grey, white);
                         justify-self: center;
                         position: relative;
 
                         .switch-btn {
                             position: absolute;
                             top: -1px;
-                            transition: all 1s ease-in 0s;
+                            transition: all 0.3s ease-in 0s;
+                            left: 19px;
 
                             &.becode,
                             &.on-state {
-                                left: 38px;
+                                transform: translateX(19px);
                             }
 
                             &.home,
                             &.off-state {
-                                left: 38px;
-                                transform: translateX(-38px);
+                                transform: translateX(-19px);
                             }
 
                             .container-img-btn {
