@@ -2,17 +2,20 @@ const locationBtn = document.getElementById("location");
 const activityBtn = document.getElementById("activity");
 let countLocation = 0;
 let countActivity = 0;
+var locationState = "becode";
 
 function switchLocation() {
     if (countLocation == 0) {
         locationBtn.classList.remove("becode")
         locationBtn.classList.add("home")
         countLocation++;
+        locationState = "home";
     }
     else if (countLocation == 1) {
         locationBtn.classList.remove("home")
         locationBtn.classList.add("becode")
         countLocation--;
+        locationState = "becode";
     }
 }
 
