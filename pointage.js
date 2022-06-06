@@ -36,10 +36,10 @@ function pointage() {
     if ((heure == 08 && min == 45) || (heure == 12 && min == 30) || (heure == 13 && min == 20) || (heure == 17 && min == 00)) {
         location.reload();
     } // refresh
-    else if (heure == 08 && min == 46 && currentLocation === "becode") {
+    else if (heure == 08 && min == 46 && currentLocation === "becode" && currentActivity === "on-state") {
         document.querySelector(".btn-outline-primary").click();
     } // becode
-    else if (heure == 08 && min == 46 && currentLocation === "home") {
+    else if (heure == 08 && min == 46 && currentLocation === "home" && currentActivity === "on-state") {
         document.querySelector(".btn-outline-secondary").click();
     } // home
     else if (currentActivity === "on-state" && ((heure == 08 && min >= 47) || (heure == 12 && min >= 31) || (heure == 13 && min >= 21) || (heure == 17 && min >= 01))) {
