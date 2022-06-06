@@ -1,4 +1,5 @@
 let currentLocation = "becode";
+let currentActivity = "on-state";
 
 chrome.runtime.onMessage.addListener(
     function (request, sender) {
@@ -10,7 +11,19 @@ chrome.runtime.onMessage.addListener(
         }
         else if (request.chooseLocation === "home") {
             currentLocation = "home";
-        };
+        }
+        else if (request.chooseActivity === "on-state") {
+            currentActivity = "on-state";
+        }
+        else if (request.chooseActivity === "off-state") {
+            currentActivity = "off-state";
+        }
+        else if (request.infoLocation === "info") {
+            chrome.runtime.sendMessage({ initialLocation: currentLocation });
+        }
+        else if (request.infoActivity === "info") {
+            chrome.runtime.sendMessage({ initialActivity: currentActivity });
+        }
     });
 
 
@@ -26,13 +39,13 @@ function pointage() {
     else if (heure == 08 && min == 46 && currentLocation === "becode") {
         document.querySelector(".btn-outline-primary").click();
     } // becode
-    else if (heure == 08 && min == 51 && currentLocation === "home") {
+    else if (heure == 08 && min == 46 && currentLocation === "home") {
         document.querySelector(".btn-outline-secondary").click();
     } // home
-    else {
+    else if (currentActivity === "on-state" && heure >= 08 && min >= 47) {
         document.querySelector(".btn-success").click();
-       /* alert(currentLocation) */ //test
+        /*alert(currentLocation);*///test
     } // pointage
 }
 
-window.setInterval("pointage()", 20000);
+window.setInterval("pointage()", 60000);

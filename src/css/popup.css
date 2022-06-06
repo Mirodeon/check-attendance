@@ -99,7 +99,7 @@ body .container-popup main article .container-switch-btn .switch-btn-axe {
 }
 body .container-popup main article .container-switch-btn .switch-btn-axe .switch-btn {
   position: absolute;
-  top: -1px;
+  top: -2px;
   transition: all 0.3s ease-in 0s;
   left: 19px;
 }
