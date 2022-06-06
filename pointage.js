@@ -42,9 +42,9 @@ function pointage() {
     else if (heure == 08 && min == 46 && currentLocation === "home") {
         document.querySelector(".btn-outline-secondary").click();
     } // home
-    else if (currentActivity === "on-state" && heure >= 08 && min >= 47) {
+    else if (currentActivity === "on-state" && ((heure == 08 && min >= 47) || (heure == 12 && min >= 31) || (heure == 13 && min >= 21) || (heure == 17 && min >= 01))) {
         document.querySelector(".btn-success").click();
-        /*alert(currentLocation);*///test
+        /*alert(currentLocation);//test*/
     } // pointage
 }
 
